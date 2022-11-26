@@ -1,20 +1,28 @@
-for(let i=0 ; i<=100 ; i++){
-    if(i%2 !== 0) continue ;
-    console.log(i);
+const users = [
+    { firstName : "Ahmad" , lastName : "Kabiri" , age : 24 , email : "Ahmadkabiriw@gmail.com" },
+    { firstName : "Ali" , lastName : "Kabiri" , age : 14 , email : "Alikabiri1386@gmail.com"},
+    { firstName : "Abbas" , lastName : "Kabiri" , age : 30 , email : "Abbaskabiri1371@gmail.com"},
+];
+
+let userObject = {};
+
+while(true){
+
+    userObject.firstName = prompt("Enter your first name !");
+    if(userObject.firstName.length>=3 && userObject.firstName.length <= 10){
+        break;
+    }
 }
 
-let i = 0 ;
-while (i<101){
-    if(i%2 == 0){
-        console.log(i);
+while(true){
+
+    userObject.lastName = prompt("Enter your last name !");
+    if(userObject.lastName.length>=3 && userObject.lastName.length <= 15){
+        break;
     }
-    i++ ;
 }
 
-let j = 0 ;
-do{
-    if(j%2 == 0){
-        console.log(j);
-    }
-    j++ ; 
-}while(j<101);
+userObject.age = prompt("Enter your age !");
+userObject.email = prompt("Enter your email !");
+users[3] = userObject ;
+

@@ -1,42 +1,29 @@
-const products = [
-{ id : 1 , name : "book" },
-{ id : 2 , name : "pen" },
-{ id : 3 , name : "pencil" },
-{ id : 4 , name : "roler" },
-{ id : 5 , name : "eraser" },
-{ id : 6 , name : "paper" },
+const products =[
+    {name : "pen" , price : 12*1000} ,
+    {name : "pencil" , price : 10*1000} ,
+    {name : "book" , price : 115*1000} ,
+    {name : "watch" , price : 450*1000} ,
+    {name : "bag" , price : 80*1000} ,
+    {name : "phone" , price : 4000*1000} ,
+    {name : "laptop" , price : 20000*1000} ,
 ]
 
-const userBought = [
-    { id : 7 , name : "tarash" },
-    { id : 8 , name : "notebook" },
-    { id : 9 , name : "bag" },
-]
+// const productsUp100 = products.filter((item)=>{
+//     return item.price < 100*1000
+// })
 
-let userTold = prompt(`Do you want to delete an item of your cart?(Enter delete !)
-Or do you want to buy a something else ?(Enter add !)`)
+// let postPrice = productsUp100.length*1000 ;
 
-if(userTold == "delete"){
-    let userDelete = prompt("what you want to delete?");
-    let itemIndex = userBought.findIndex((item)=>{
-        return item.name == userDelete ;
-    })
-    if(itemIndex == -1){
-        alert("This product is not in your cart !!")
-    }else{
-        userBought.splice(itemIndex,1);
-        console.log(userBought)
-    }
-}else{
-    let useradd = prompt("what you want to add?");
-    let itemIIndexadded = products.findIndex((item)=>{
-        return item.name == useradd ;
-    })
-    if(itemIIndexadded == -1){
-        alert("This product is not in our shop !!")
-    }else{
-        userBought.push(products[itemIIndexadded]);
-        console.log(userBought);
-        console.group(userBought);
-    }
-}
+// let totalPrice = 0 ;
+// products.forEach(element => {
+//     totalPrice += element.price ;
+// });
+
+// console.log(`Your product price is : ${ totalPrice} toman 
+// your post price is : ${postPrice} toman
+// And your total price is : ${totalPrice+postPrice}`)
+
+
+const someOfProducts = products.splice(2,3);
+console.log(someOfProducts);
+console.log(products)
